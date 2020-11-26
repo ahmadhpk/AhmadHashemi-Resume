@@ -54,6 +54,12 @@
           Documentation
         </a>
         <a
+         class="button--grey"
+         href="/About-me"
+         >
+          About Me
+        </a>
+        <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           rel="noopener noreferrer"
