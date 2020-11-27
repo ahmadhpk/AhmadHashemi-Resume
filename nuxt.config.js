@@ -1,3 +1,5 @@
+import language from './static/lang/language';
+
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
@@ -7,6 +9,9 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
+    htmlAttrs: {
+      dir: 'rtl'
+    },
     title: 'AhmadHashemi-Resume',
     meta: [
       { charset: 'utf-8' },
@@ -25,6 +30,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    '~plugins/i18n-config.js',
     '@/plugins/vuesax'
   ],
 
@@ -37,6 +43,23 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    [
+      'nuxt-i18n',
+      {
+        locales: language,
+        lazy: true,
+        langDir: 'static/lang/',
+        defaultLocale: 'es',
+        vueI18n: {
+          fallbackLocale: 'es',
+        },
+        detectBrowserLanguage: {
+          useCookie: true,
+          cookieKey: 'i18n_redirected',
+          alwaysRedirect: true
+        },
+      }
+    ]
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

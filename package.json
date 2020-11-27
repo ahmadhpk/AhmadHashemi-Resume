@@ -9,10 +9,16 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/html-minifier": "^0.1.2",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "nuxt-i18n": "^6.15.4",
-    "vuesax": "^4.0.1-alpha.25"
+    "rtl-sass": "^1.5.0",
+    "vue-fragment": "^1.5.1",
+    "vuesax": "^4.0.1-alpha.25",
+    "vuetify": "^2.3.19"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
 }
